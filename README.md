@@ -1,7 +1,7 @@
 ## Getting Started
 
 ## IDE and Tools
-1. [Visual Code](https://code.visualstudio.com/). Install the Extension Pack for Java which contains the Maven plugin [here](https://code.visualstudio.com/docs/java/java-build)
+1. [Visual Code](https://code.visualstudio.com/) -  Install the Extension Pack for Java which contains the Maven plugin [here](https://code.visualstudio.com/docs/java/java-build)
 2. [Maven 3.9.6](https://maven.apache.org/download.cgi) (Remember to set PATH)
 
 ## Setup

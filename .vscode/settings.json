@@ -1,0 +1,29 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "RefLib/jpbc-2.0.0/jars/bcprov-jdk16-1.46.jar",
+        "RefLib/jpbc-2.0.0/jars/jna-3.2.5.jar",
+        "RefLib/jpbc-2.0.0/jars/jpbc-api-2.0.0.jar",
+        "RefLib/jpbc-2.0.0/jars/jpbc-benchmark-2.0.0.jar",
+        "RefLib/jpbc-2.0.0/jars/jpbc-crypto-2.0.0.jar",
+        "RefLib/jpbc-2.0.0/jars/jpbc-mm-2.0.0.jar",
+        "RefLib/jpbc-2.0.0/jars/jpbc-pbc-2.0.0.jar",
+        "RefLib/jpbc-2.0.0/jars/jpbc-plaf-2.0.0.jar",
+        "RefLib/bcprov-jdk16-1.46.jar",
+        "RefLib/jna-3.2.5.jar",
+        "RefLib/jpbc-api-2.0.0.jar",
+        "RefLib/jpbc-benchmark-2.0.0.jar",
+        "RefLib/jpbc-crypto-2.0.0.jar",
+        "RefLib/jpbc-mm-2.0.0.jar",
+        "RefLib/jpbc-pbc-2.0.0.jar",
+        "RefLib/jpbc-plaf-2.0.0.jar",
+        "RefLib/jpbc-test-2.0.0-tests.jar",
+        "RefLib/gson-2.10.1.jar"
+    ],
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}

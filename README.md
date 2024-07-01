@@ -38,12 +38,8 @@
 2. Open the downloaded project directory in Visual Studio Code.
 3. Overwrite the folder "fabric-samples/asset-transfer-basic/chaincode-java" by "Fabric-Java/chaincode-java".
 4. Overwrite the folder "fabric-samples/asset-transfer-basic/application-java" by "Fabric-Java/application-java".
-5. Deploy the chaincode, "fabric-samples/asset-transfer-basic/chaincode-java". Refer to the shell code in "shell/deployCC.sh" (Set the paths properly). An example of the command is:
-    ```bash
-    ./deployCC.sh 1.1 1
-    ```
-    where 1.1 is the version number and 1 is sequence number.
-6. After chaincode is deployed successfully, copy the curve property file to the chaincode container. Refer to "shell/copyP.sh".
+5. Deploy the chaincode, "fabric-samples/asset-transfer-basic/chaincode-java".
+6. After chaincode is deployed successfully, copy the curve property file to the chaincode container.
 7. Run the Java program "fabric-samples/asset-transfer-basic/application-java/src/main/java/application/java/App.java". (Uncommment Lines 57 and 58 for admin enrolment and user registration for the first run)
 
 ### Running in Ethereum

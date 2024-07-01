@@ -34,11 +34,11 @@
 `src\main\java\DisIMS\DisIMS.java` contains the main() method to test the entire flow of the DisIMS scheme.
 
 ### Running in Hyperleger Fabric
-1. Setup a test network. [Guidelines](https://hyperledger-fabric.readthedocs.io/en/release-2.5/install.html). The network should contain two endorsing peers, one orderer and one CA, by issuing `./network.sh up createChannel -ca`
+1. Set up a test network. [Guidelines](https://hyperledger-fabric.readthedocs.io/en/release-2.5/install.html). The network should contain two endorsing peers, one orderer and one CA, by issuing `./network.sh up createChannel -ca`
 2. Open the downloaded project directory in Visual Studio Code.
 3. Overwrite the folder "fabric-samples/asset-transfer-basic/chaincode-java" by "Fabric-Java/chaincode-java".
 4. Overwrite the folder "fabric-samples/asset-transfer-basic/application-java" by "Fabric-Java/application-java".
-5. Deploy the chaincode, "fabric-samples/asset-transfer-basic/chaincode-java". Refer to the shell code in "shell/deployCC.sh" (Set the paths properly) An example of the command is:
+5. Deploy the chaincode, "fabric-samples/asset-transfer-basic/chaincode-java". Refer to the shell code in "shell/deployCC.sh" (Set the paths properly). An example of the command is:
     ```bash
     ./deployCC.sh 1.1 1
     ```
@@ -47,12 +47,12 @@
 7. Run the Java program "fabric-samples/asset-transfer-basic/application-java/src/main/java/application/java/App.java". (Uncommment Lines 57 and 58 for admin enrolment and user registration for the first run)
 
 ### Running in Ethereum
-If the smart contract file is changed, use the following command in the root folder to generate the new Java Wrapper.
+1. If the smart contract file is changed, use the following command in the root folder to generate the new Java Wrapper.
     ```bash
     mvn web3j:generate-sources
     ```
 
-`src\main\java\DisIMS\DisIMSExperiment.java` contains the main() method to test the entire flow of the DisIMS scheme. Place the .properties file in the root directory, which is not uploaded to github for security purpose. It contains the private key of the testing Ethereum testnet (Sepolia) account.
+`src\main\java\DisIMS\DisIMSExperiment.java` contains the main() method to test the entire flow of the DAC scheme. Place the .properties file in the root directory, which is not uploaded to github for security purpose. It contains the private key of the testing Ethereum testnet (Sepolia) account.
 
 ## Pairing Library
 

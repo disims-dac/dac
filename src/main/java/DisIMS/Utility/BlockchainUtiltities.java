@@ -35,7 +35,7 @@ public class BlockchainUtiltities {
 
         try {
             Properties appProps = new Properties();
-            appProps.load(new FileInputStream(".properties2"));
+            appProps.load(new FileInputStream(".properties"));
 
             privateKey = appProps.getProperty("sk");
             contractAddress = appProps.getProperty("contract");
@@ -51,19 +51,22 @@ public class BlockchainUtiltities {
             // testWithdraw();
 
             // getBalance("0x" + contractAddress);
-            // testDeployERC721();
+            testDeployERC721();
             // testMint();
             // testGetURLToken();
             // getcurrentgasprice();
 
             // createNoNFTContract();
-            System.out.println(testNoNFT(DisIMSUtiltities.getHash("ok")));
+            // System.out.println(testNoNFT(DisIMSUtiltities.getHash("ok")));
+            // System.out.println(
+            // (new BigInteger(
+            // "479095176016622842441988045216678740799252316531100822436447802254070093686356349204969212544220033486413271283566945264650845755880805213916963058350733"))
+            // .bitLength());
             // getNoNFTHash();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public static void getNoNFTHash() {

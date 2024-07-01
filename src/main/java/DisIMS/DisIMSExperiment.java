@@ -24,7 +24,7 @@ public class DisIMSExperiment {
                 BlockchainUtiltities.publicKey = appProps.getProperty("pk");
 
                 // Parameter Setup
-                DisIMS disMIS = new DisIMS();
+                DisIMSBackupEth disMIS = new DisIMSBackupEth();
                 Element g = disMIS.getG();
                 Element w = disMIS.getW();
                 Element v = disMIS.getV();
@@ -105,7 +105,7 @@ public class DisIMSExperiment {
                 System.out.println("=== UserVerify Result: " + userVerifyResult + " === ");
 
                 // Show
-                CredentialPrime cre_prime = new CredentialPrime(pairing);
+                CredentialPI cre_prime = new CredentialPI(pairing);
                 // For the number of attributes, suppose we have 50 attributes in the credential
                 // We test the average time of generating the proof for sub-credential
                 Element[] attributesVer = { a1, a3 };
@@ -118,7 +118,7 @@ public class DisIMSExperiment {
                 System.out.println("=== Check === ");
                 // Measure the time of verifying the proof for sub-credential
                 // Start
-                boolean checkResult = cre_prime.check(caKey.getZ(), pk_U_A, caKey.getZ(),
+                boolean checkResult = cre_prime.check(pk_U_A, caKey.getZ(),
                                 attributesVer, g, w, v, h, u);
                 // End
                 System.out.println("=== Check Result: " + checkResult + " === ");
@@ -144,7 +144,7 @@ public class DisIMSExperiment {
 
                 Element[] attributesVer2 = { a6, a7 };
 
-                CredentialPrime cre_prime2 = new CredentialPrime(pairing);
+                CredentialPI cre_prime2 = new CredentialPI(pairing);
                 Element pk_U_A2 = cre_prime2.show(newC2, attributesVer2, caKey, uKey, g, w, v,
                                 h, u);
 
@@ -181,11 +181,11 @@ public class DisIMSExperiment {
 
                 System.out.println("=== Reading Credential Prime 1 from File ===");
                 dataInputStream = new DataInputStream(new FileInputStream("credentialPrime.data"));
-                CredentialPrime newCre_prime = new CredentialPrime(pairing);
+                CredentialPI newCre_prime = new CredentialPI(pairing);
                 newCre_prime.deserialize(dataInputStream);
                 System.out.println("=== Reading Credential Prime 2 from File ===");
                 dataInputStream = new DataInputStream(new FileInputStream("credentialPrime2.data"));
-                CredentialPrime newCre_prime2 = new CredentialPrime(pairing);
+                CredentialPI newCre_prime2 = new CredentialPI(pairing);
                 newCre_prime2.deserialize(dataInputStream);
 
                 System.out.println(
@@ -198,13 +198,13 @@ public class DisIMSExperiment {
                                                                 .equals(DisIMSUtiltities.getHashStringFromFile(
                                                                                 "credentialPrime2.data"))));
 
-                CredentialPrime cpsPrime[] = { newCre_prime, newCre_prime2 };
+                CredentialPI cpsPrime[] = { newCre_prime, newCre_prime2 };
 
                 System.out.println("=== MintVerify === ");
 
                 // Measure the time for verifying a group of shown credentials
                 // Start
-                boolean mintVerifyResult2 = CredentialPrime.mintVerify(cpsPrime, pk_U_As,
+                boolean mintVerifyResult2 = CredentialPI.mintVerify(cpsPrime, pk_U_As,
                                 caKey.getZ(), attributesVerS, pairing, g, w,
                                 v, h, u);
                 // End
